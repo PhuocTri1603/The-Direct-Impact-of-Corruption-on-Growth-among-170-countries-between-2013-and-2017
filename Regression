@@ -1,0 +1,19 @@
+gen politicalright2= politicalright^2
+reg realgdpgrowth corruption gdp2002 politicalright politicalright2 populationgrowth,r
+reg realgdpgrowth corruption gdp2002 politicalright politicalright2 inv_gdp populationgrowth,r
+reg realgdpgrowth corruption gdp2002 politicalright politicalright2 schoolingyears inv_gdp populationgrowth,r
+reg realgdpgrowth corruption gdp2002 politicalright politicalright2 politicalstability inv_gdp populationgrowth,r
+reg realgdpgrowth corruption gdp2002 politicalright politicalright2 politicalstability schoolingyears populationgrowth,r
+reg realgdpgrowth corruption gdp2002 politicalright politicalright2 politicalstability schoolingyears inv_gdp populationgrowth,r
+reg inv_gdp corruption gdp2002 politicalright politicalright2 populationgrowth,r
+reg schoolingyears corruption gdp2002 politicalright politicalright2 populationgrowth,r
+reg politicalstability corruption gdp2002 politicalright politicalright2 populationgrowth,r
+ivregress 2sls realgdpgrowth (corruption= asia africa latinamerica fractionalization) gdp2002 politicalright politicalright2 populationgrowth,r
+ivregress 2sls realgdpgrowth (corruption= asia africa latinamerica fractionalization) gdp2002 politicalright politicalright2 inv_gdp populationgrowth,r
+ivregress 2sls realgdpgrowth (corruption= asia africa latinamerica fractionalization) gdp2002 politicalright politicalright2 schoolingyears inv_gdp populationgrowth,r
+ivregress 2sls realgdpgrowth (corruption= asia africa latinamerica fractionalization) gdp2002 politicalright politicalright2 politicalstability inv_gdp populationgrowth,r
+ivregress 2sls realgdpgrowth (corruption= asia africa latinamerica fractionalization) gdp2002 politicalright politicalright2 politicalstability schoolingyears populationgrowth,r
+ivregress 2sls realgdpgrowth (corruption= asia africa latinamerica fractionalization) gdp2002 politicalright politicalright2 politicalstability schoolingyears inv_gdp populationgrowth,r
+ivregress 2sls inv_gdp (corruption= asia africa latinamerica fractionalization) gdp2002 politicalright politicalright2 populationgrowth,r
+ivregress 2sls schoolingyears (corruption= latinamerica africa asia fractionalization) gdp2002 politicalright politicalright2 populationgrowth,r
+ivregress politicalstability (corruption= asia africa latinamerica fractionalization) gdp2002 politicalright politicalright2 populationgrowth,r
